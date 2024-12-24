@@ -1,0 +1,29 @@
+-New laravel project
+	laravel new {project folder name}
+
+================================================================
+-Setting up a testing server - Laravel
+	npm install vite --save-dev
+
+-Local app server
+	npx vite
+*ctrl+c to exit on terminal 
+
+-Building for live website
+	npx vite build
+
+*Delete hot file if shown
+
+================================================================
+-Make new model 
+	php artisan make:model {model name} -m
+-Migration(make/edit tables within the db)
+	php artisan migrate
+
+*Within a form in Laravel requires {{ csrf_field() }}
+*Form actions are handles using route
+
+-Make new controller
+	php artisan make:controller {controller name}}
+
+-Log all form request with \Log::info(json_encode($request->all()));

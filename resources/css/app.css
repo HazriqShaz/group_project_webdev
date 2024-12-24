@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* Section  */
+    .section {
+        @apply flex relative flex-col w-screen h-[50vh]
+            lg:h-[75vh];
+    }
+
+    .sub-section {
+        @apply flex relative w-screen h-[25vh] bg-primary-1 p-4 
+            sm:px-8 lg:h-[50vh];
+            /* lg:bg-red-500 xl:bg-green-500  */
+    }
+
+    /* END Section  */
+
+    /* Images */
+
+    .img-container {
+        @apply w-1/2 h-[100%] flex bg-red-500;
+    }
+
+    .img-container-left {
+        @apply justify-end;
+    }
+
+    .sub-section-img {
+        @apply object-cover h-[100%] w-[100%] shadow-lg;
+    }
+
+    /* END Images */
+
+    /* Nav Bar */
+    .nav-bar {
+        @apply w-screen h-16 absolute flex items-center pl-4 z-20
+            sm:pl-8;
+    }
+    
+    .nav-links {
+        @apply hidden lg:flex w-[100%] absolute top-0 left-0 justify-center pt-5 text-white font-black;
+    }
+
+    .nav-links-item {
+        @apply w-32 text-center mx-2 text-sm;
+    }
+
+        /* Drop Down */
+        .drop-down-icon {
+            @apply h-7 text-white ml-auto pr-4
+                sm:pr-8 lg:hidden;
+        }
+
+        .drop-down-menu {
+            @apply z-10 absolute w-44 h-60 top-0 right-0 flex flex-col bg-opacity-1 text-right text-sm font-semibold;
+        }
+
+        .drop-down-item {
+            @apply z-30 flex-1 p-4
+                sm:pr-8;
+        }
+        /* END Drop Down */
+    /* END Nav Bar */
+    
+    /* Text Infront Image */
+    .text-image-container {
+        @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center;
+    }
+    /* END Text Infront Image */
+
+    /* Parallex */
+    .parallex {
+        @apply bg-fixed bg-parallax bg-cover flex items-center justify-center text-white font-semibold text-sm px-40;
+    }
+
+    .order-btn {
+        @apply bg-opacity-2 py-3 px-6 border-[1px] border-secondary-text-1 text-secondary-text-1
+            sm:px-8 sm:text-xl text-xs text-center;
+    }
+    /* END Parallex */
+
+    /* Content  */
+    .section-content {
+        @apply w-[100%] relative flex flex-col items-center text-sm text-center px-4 justify-center
+            sm:px-8 sm:text-base;
+    }
+
+    .line-spacing {
+        @apply absolute bottom-0 w-40 border-b-[1px] border-primary-text-2;
+    }
+
+    .sub-section-content {
+        @apply w-1/2 h-[100%] p-4 border-[1px] border-primary-text-2 shadow-lg;
+    }
+
+    .sub-section-content h1 {
+        @apply font-bold;
+    }
+
+    .sub-section-content p {
+        @apply text-sm;
+    }
+    /* END Content  */
+
+    /* Footer */
+    .footer {
+        @apply w-[100%] text-sm pt-6;
+    }
+    /* END Footer */
+
+}
