@@ -25,6 +25,7 @@ export default {
             },
             backgroundImage: {
                 'parallax': 'url("https://i.postimg.cc/vZr9MwvG/1.jpg")',
+                'wallpaper': 'url("https://i.postimg.cc/Njk4DHS8/wall1.jpg")',
             },
         },
     },

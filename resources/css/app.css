@@ -4,7 +4,13 @@
 
 @layer components {
 
+    body {
+        overflow-x: hidden;
+    }
+
+/* ABOUT PAGE */
     /* Section  */
+
     .section {
         @apply flex relative flex-col w-screen h-[50vh]
             lg:h-[75vh];
@@ -45,7 +51,7 @@
     }
 
     .nav-links-item {
-        @apply w-32 text-center mx-2 text-sm;
+        @apply w-32 text-center mx-2 text-sm hover:scale-110 transform transition duration-300 ease-in-out;
     }
 
         /* Drop Down */
@@ -55,7 +61,8 @@
         }
 
         .drop-down-menu {
-            @apply z-10 absolute w-44 h-60 top-0 right-0 flex flex-col bg-opacity-1 text-right text-sm font-semibold;
+            @apply z-10 absolute w-44 h-60 top-0 right-0 flex flex-col bg-opacity-1 text-right text-sm font-semibold
+                lg:hidden;
         }
 
         .drop-down-item {
@@ -73,12 +80,22 @@
 
     /* Parallex */
     .parallex {
-        @apply bg-fixed bg-parallax bg-cover flex items-center justify-center text-white font-semibold text-sm px-40;
+        @apply bg-fixed bg-parallax bg-cover flex items-center justify-center text-white font-semibold text-sm px-40
+            xl:px-[28rem];
     }
 
     .order-btn {
         @apply bg-opacity-2 py-3 px-6 border-[1px] border-secondary-text-1 text-secondary-text-1
-            sm:px-8 sm:text-xl text-xs text-center;
+            sm:px-8 sm:text-base text-xs text-center transform transition duration-300 hover:scale-110;
+    }
+
+    .parallex-content {
+        @apply flex flex-col;
+    }
+
+    .parallex-content-btn {
+        @apply w-32 bg-opacity-2 py-3 mt-4 border-[1px] text-center border-secondary-text-1 text-secondary-text-1
+        transform transition duration-300 hover:scale-110;
     }
     /* END Parallex */
 
@@ -103,12 +120,143 @@
     .sub-section-content p {
         @apply text-sm;
     }
+
+    .card-section {
+        @apply flex-1 flex space-x-4 justify-center;
+    }
+
+    .card {
+        @apply w-[16.2rem] h-[100%] border-[1px] border-primary-text-2 flex flex-col
+        xl:flex xl:w-[19rem];
+    }
+
+    .card-image-container {
+        @apply w-[100%] h-[60%];
+    }
+
+    .card-content {
+        @apply flex-1 px-6 pt-10;
+    }
+
+    .card-content h1 {
+        @apply font-bold text-xl;
+    }
+
+    .card-content p {
+        @apply text-base;
+    }
+
     /* END Content  */
 
-    /* Footer */
-    .footer {
-        @apply w-[100%] text-sm pt-6;
+/* END ABOUT PAGE */
+
+/* SPECS PAGE */
+    .specs-header {
+        @apply relative w-[100%] h-[5rem] border-t-[1px] border-primary-text-2 text-center font-bold text-xl text-white py-6;
+    
     }
-    /* END Footer */
+
+    .specs-line {
+        @apply absolute bottom-0 left-1/2 translate-x-[-50%] w-[90%] border-b-[1px] border-primary-text-2
+            sm:w-[92%] xl:w-[60%];
+    
+    }
+
+    .specs-image-container {
+        @apply flex grow object-contain relative;
+    }
+    
+    .specs-image {
+        @apply w-[90%] xl:w-[58%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    }
+
+    .specs-container-1 {
+        @apply w-[100%] h-[6rem] flex xl:hidden;
+    }
+
+    .specs-container-2 {
+        @apply w-[100%] flex flex-col pt-4 px-6
+            lg:px-10 xl:px-[24rem];
+    }
+
+    .specs-container-2 h1 {
+        @apply underline;
+    }
+
+    .specs-container-xl {
+        @apply w-full flex px-[20rem];
+    }
+
+    .specs-bullet {
+        @apply text-sm pl-3 pr-12 text-gray-500;
+    }
+
+    .specs-icon {
+        @apply h-full w-[32%] object-contain flex items-start justify-end; 
+    }
+
+    .specs-content {
+        @apply h-full w-[68%] pl-8 xl:w-[16rem];
+    }
+
+    .specs-content h2{
+        @apply text-gray-500;
+    }
+/* END SPECS PAGE */
+
+/* ORDER PAGE */
+    .order-content {
+        @apply p-5 w-screen;
+    }
+
+    .order-content h1 {
+        @apply text-xl font-bold text-white;
+    }
+
+    .order-content h2 {
+        @apply text-lg;
+    }
+
+    .order-content h3 {
+        @apply text-lg font-bold;
+    }
+
+    .label {
+        @apply block text-sm/6 font-medium pt-8;
+    }
+
+    .input {
+        @apply block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-text-1;
+    }
+
+/* END ORDER PAGE */
+
+/* LOGIN PAGE */
+    .login {
+        @apply w-[20rem] h-[32rem] border-[1px] border-primary-text-2 rounded-lg shadow-xl
+        flex flex-col items-center bg-primary-1;
+    }
+
+/* END LOGIN PAGE */
+
+/* DASHBOARD */
+    .dashboard-nav {
+        @apply w-screen h-[8rem];
+    }
+
+    .exit-icon {
+        @apply h-7 text-white ml-auto pr-4
+            sm:pr-8;
+    }
+
+    .table-row {
+        @apply odd:bg-primary-text-2 even:bg-gray-500;
+    }
+
+    .table-th {
+        @apply px-6 py-4 font-medium whitespace-nowrap;
+    }
+/* END DASHBOARD */
 
 }
+

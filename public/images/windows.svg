@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="103.626mm" height="94.1739mm" version="1.0" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 1079 980" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#bbbbbb}
+   ]]>
+  </style>
+ </defs>
+ <g id="图层_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2984928989856">
+   <path class="fil0" d="M34 540l399 0c18,0 33,-15 33,-34l0 -377c0,-18 -15,-36 -33,-33l-399 55c-19,3 -34,15 -34,34l0 321c0,19 15,34 34,34z"/>
+   <path class="fil0" d="M570 540l464 0c24,0 45,-18 45,-40l0 -460c0,-22 -21,-44 -45,-40l-464 77c-24,4 -44,18 -44,40l0 383c0,22 20,40 44,40z"/>
+   <path class="fil0" d="M34 980l399 0c18,0 33,-15 33,-33l0 -322c0,-19 -15,-34 -33,-34l-399 1c-19,0 -34,15 -34,33l0 322c0,18 15,33 34,33z"/>
+   <path class="fil0" d="M570 980l464 0c24,0 45,-18 45,-40l0 -308c0,-23 -21,-41 -45,-41l-464 1c-24,0 -44,18 -44,40l0 308c0,22 20,40 44,40z"/>
+  </g>
+ </g>
+</svg>
