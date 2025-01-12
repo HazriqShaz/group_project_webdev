@@ -11,7 +11,7 @@
 <body class=" bg-primary-1 text-primary-text-1 box-border w-screen h-screen flex flex-col justify-center items-center">
     <img class=" h-7 mb-4" src="{{ asset('images/Logo-white.svg') }}" alt="Logo">
     
-    <form class="" action="" method="post">
+    <form class="" action="{{ route('login') }}" method="POST">
         @csrf
         <div class="login">
                 <div class="login-container">

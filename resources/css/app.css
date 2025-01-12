@@ -246,11 +246,11 @@
 
     .exit-icon {
         @apply h-7 text-white ml-auto pr-4
-            sm:pr-8;
+            sm:pr-8 transform transition duration-300 hover:scale-110;
     }
 
     .table-row {
-        @apply odd:bg-primary-text-2 even:bg-gray-500;
+        @apply odd:bg-primary-text-2 even:bg-gray-600;
     }
 
     .table-th {
@@ -258,5 +258,12 @@
     }
 /* END DASHBOARD */
 
+/* EDIT */
+    .edit {
+        @apply border-[1px] border-primary-text-2 rounded-lg shadow-xl
+        p-6 mx-4 lg:mx-8;
+    }
+
+/* END EDIT */
 }
 

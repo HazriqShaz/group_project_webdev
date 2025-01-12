@@ -16,9 +16,9 @@ class PageController extends Controller
         return view('login');
     }
 
-    public function dashboard()
+    public function edit()
     {
-        return view('dashboard');
+        return view('edit');
     }
 
 }

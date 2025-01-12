@@ -61,4 +61,80 @@ class OrderController extends Controller
 
         return view('order', compact('colors'));  // Pass the colors to the view
     }
+
+    public function showOrders() {
+        $orders = Order::with(['customer', 'product'])->get();
+
+        // Pass the orders data to the view
+        return view('dashboard', compact('orders'));
+    }
+
+    public function edit($id)
+    {
+        // Fetch the order by ID, including related customer and product data
+        $order = Order::with(['customer', 'product'])->findOrFail($id);
+
+        // Get the list of products (for the color selection)
+        $products = Product::all();
+
+        // Pass the order and products to the edit view
+        return view('edit', compact('order', 'products'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Validate the incoming data
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'nullable',
+            'address' => 'nullable',
+            'color' => 'nullable',
+            'quantity' => 'nullable',
+            'status' => 'nullable|in:1,0', // Only 1 or 0 are allowed for status
+        ]);
+
+        // Find the order to update
+        $order = Order::findOrFail($id);
+
+        // Check if the related customer and product exist
+        if ($order->customer) {
+            $order->customer->name = $request->input('name');
+            $order->customer->email = $request->input('email');
+            $order->customer->phone = $request->input('phone');
+            $order->customer->address = $request->input('address');
+            $order->customer->save();
+        }
+
+        if ($order->product) {
+            $order->product->color = $request->input('color');
+            $order->product->save();
+        }
+
+        $order->quantity = $request->input('quantity');
+        $order->status = $request->input('status');
+
+        $total_payment = $request->input('quantity') * $order->product->cost;
+        $order->total_payment = $total_payment;
+
+        $order->save();
+
+        return redirect()->route('dashboard')->with('success', 'Order updated successfully!');
+    }
+
+    public function destroy($id)
+    {
+        // Find the order by ID
+        $order = Order::findOrFail($id);
+
+        // If you have foreign keys with cascading deletes, this might not be necessary
+        $order->customer->delete();  // Delete the customer if it's related and needs to be deleted
+        
+        // Delete the order
+        $order->delete();
+
+        // Redirect back with success message
+        return redirect()->route('dashboard')->with('success', 'Order deleted successfully!');
+    }
+
 }
